@@ -20,12 +20,12 @@ namespace LegoMinifigures
         public string Job { get; private set; }
         public int OxygenLevel { private get; set; }
 
-        public AstronautTorso Torso { get; set; }
+        public TorsoBase Torso { get; set; }
         public AstronautLegs Legs { get; set; }
         public ZoeHead Head { get; set; }
 
         public Astronaut(string name, string job, 
-                         ZoeHead head, AstronautTorso torso, 
+                         ZoeHead head, TorsoBase torso, 
                          AstronautLegs legs)
         {
             Name = name;
