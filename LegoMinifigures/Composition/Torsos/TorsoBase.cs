@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LegoMinifigures.Composition.Heads;
 
 namespace LegoMinifigures.Composition.Torsos
 {
-    abstract class TorsoBase
+    abstract class TorsoBase : IColorful
     {
         public virtual bool ChiseledAbs { get; set; }
         public bool Shirted { get; set; }
@@ -16,5 +17,7 @@ namespace LegoMinifigures.Composition.Torsos
         {
             Console.WriteLine("Inhale, Exhale...");
         }
+
+        public LegoColor Color => LegoColor.Yellow;
     }
 }

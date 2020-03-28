@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LegoMinifigures.Composition.Heads;
 
 namespace LegoMinifigures.Composition.Torsos
 {
-    class DadBodTorso : TorsoBase
+    class DadBodTorso : TorsoBase, IMoveable
     {
         public bool IsHairy { get; set; }
+
         public override bool ChiseledAbs
         {
             get { return false; }
             set { }
         }
-
-
+        
         public void ChangeTemperature(string weather)
         {
             if (weather == "cold")
@@ -32,6 +33,10 @@ namespace LegoMinifigures.Composition.Torsos
                               +"beer belly while using his {HandType} hands to point at "
                               +"his flabby arms.");
         }
-        
+
+        public void Move(int howFar)
+        {
+            Console.WriteLine($"Dances in the grocery store for {howFar} minutes while singing loudly.");
+        }
     }
 }
